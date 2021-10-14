@@ -27,7 +27,7 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 #### Step 3: Launch Server using Python
 
-![Compile SmartContract](images/3_launchserver.JPG)
+![Launch server](images/3_launchserver.png)
 
 
 <p>&nbsp;</p>
