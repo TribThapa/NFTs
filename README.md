@@ -62,7 +62,7 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 #### Step 8: Confirm bid and see change in minimum bid required
 
-![Marketplace](images/5_marketplace.JPG)
+![Marketplace](images/...ace.JPG)
 
 
 
