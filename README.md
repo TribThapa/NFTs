@@ -70,3 +70,4 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 ## Sources
 - [Remix](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js)
 - [Emojis](https://github.com/ikatyang/emoji-cheat-sheet#animals--nature)
+- [IPFS](https://ipfs.io/)
