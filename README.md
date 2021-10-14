@@ -9,7 +9,7 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 <p>&nbsp;</p>
 
-### The images below highlight steps involved in creating and launching Bailey's NFT in a marketplace
+## The images below highlight steps involved in creating and launching Bailey's NFT in a marketplace
 
 #### Step 1: Compile SmartContracts on [Remix](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js)
 
