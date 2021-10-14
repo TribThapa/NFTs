@@ -7,3 +7,10 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 <p align="center">
     	<img src="/bailey/BaileyPose.jpg" width="300" height="300">
 </p>
+
+
+## The images below highlight steps involved in creating and launching Bailey's NFT in a marketplace
+
+### Step 1: Compile contracts
+
+![Compile SmartContract](images/1_compilesmartcontract.JPG)
