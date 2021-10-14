@@ -8,7 +8,6 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
  
 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 ### The images below highlight steps involved in creating and launching Bailey's NFT in a marketplace
 
