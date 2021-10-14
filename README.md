@@ -29,6 +29,54 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 ![Compile SmartContract](images/2_deploycode.JPG)
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 3: Launch Server using Python
+
+![Compile SmartContract](images/3_launchserver.JPG)
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 4: Upload Bailey's images
+
+![Compile SmartContract](images/.....ver.JPG)
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 5: Create marketplace
+
+![Marketplace](images/5_marketplace.JPG)
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 6: Make bid
+
+![Marketplace](images/5_marketplace.JPG)
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 7: Confirm transaction
+
+![Marketplace](images/5_marketplace.JPG)
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#### Step 8: Confirm bid and see change in minimum bid required
+
+![Marketplace](images/5_marketplace.JPG)
+
+
 
 
 ## Sources
