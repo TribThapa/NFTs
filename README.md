@@ -21,7 +21,6 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 #### Step 2: Deploy SmartContracts on [Remix](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js)
 
