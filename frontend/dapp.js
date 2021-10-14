@@ -1,9 +1,8 @@
-// Change this address to match your deployed contract!
-const contract_address = "0xCB60E637f9123a327fed96Ed32bB5883038FEa2f";
+const contractAddress = "0xb46e0EeD70A0AEB5dE1b9bd983FBb9951D99D9B6";
 
 const dApp = {
   ethEnabled: function() {
-    // If the browser has MetaMask installed
+    // If the browser has an Ethereum provider (MetaMask) installed
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
       window.ethereum.enable();
@@ -11,51 +10,114 @@ const dApp = {
     }
     return false;
   },
-  updateUI: function() {
-    const renderItem = (copyright_id, reference_uri, icon_class, {name, description, image}) => `
-        <li>
-          <div class="collapsible-header"><i class="${icon_class}"></i>Copyright Number ${copyright_id}: ${name}</div>
-          <div class="collapsible-body">
-            <h6>Description</h6>
-            <p>${description}</p>
-            <img src="https://gateway.pinata.cloud/ipfs/${image.replace("ipfs://", "")}" style="width: 100%" />
-            <p><a href="${reference_uri}">Reference URI</a></p>
-          </div>
-        </li>
-    `;
+  collectVars: async function() {
+    // get land tokens
+    this.tokens = [];
+    this.totalSupply = await this.marsContract.methods.totalSupply().call();
 
     // fetch json metadata from IPFS (name, description, image, etc)
     const fetchMetadata = (reference_uri) => fetch(`https://gateway.pinata.cloud/ipfs/${reference_uri.replace("ipfs://", "")}`, { mode: "cors" }).then((resp) => resp.json());
 
-    // fetch the Copyright Events from the contract and append them to the UI list
-    this.contract.events.Copyright({fromBlock: 0}, (err, event) => {
-      const { copyright_id, reference_uri } = event.returnValues;
+    for (let i = 1; i <= this.totalSupply; i++) {
+      try {
+        const token_uri = await this.marsContract.methods.tokenURI(i).call();
+        console.log('token uri', token_uri)
+        const token_json = await fetchMetadata(token_uri);
+        console.log('token json', token_json)
+        this.tokens.push({
+          tokenId: i,
+          highestBid: Number(await this.marsContract.methods.highestBid(i).call()),
+          auctionEnded: Boolean(await this.marsContract.methods.auctionEnded(i).call()),
+          pendingReturn: Number(await this.marsContract.methods.pendingReturn(i, this.accounts[0]).call()),
+          auction: new window.web3.eth.Contract(
+            this.auctionJson,
+            await this.marsContract.methods.auctions(i).call(),
+            { defaultAccount: this.accounts[0] }
+          ),
+          owner: await this.marsContract.methods.ownerOf(i).call(),
+          ...token_json
+        });
+      } catch (e) {
+        console.log(JSON.stringify(e));
+      }
+    }
+  },
+  setAdmin: async function() {
+    // if account selected in MetaMask is the same as owner then admin will show
+    if (this.isAdmin) {
+      $(".dapp-admin").show();
+    } else {
+      $(".dapp-admin").hide();
+    }
+  },
+  updateUI: async function() {
+    console.log("updating UI");
+    // refresh variables
+    await this.collectVars();
 
-      fetchMetadata(reference_uri)
-      .then((json) => {
-        $("#dapp-copyrights").append(renderItem(copyright_id, reference_uri, "far fa-copyright", json));
-      });
+    $("#dapp-tokens").html("");
+    this.tokens.forEach((token) => {
+      try {
+        let endAuction = `<a token-id="${token.tokenId}" class="dapp-admin" style="display:none;" href="#" onclick="dApp.endAuction(event)">End Auction</a>`;
+        let bid = `<a token-id="${token.tokenId}" href="#" onclick="dApp.bid(event);">Bid</a>`;
+        let owner = `Owner: ${token.owner}`;
+        let withdraw = `<a token-id="${token.tokenId}" href="#" onclick="dApp.withdraw(event)">Withdraw</a>`
+        let pendingWithdraw = `Balance: ${token.pendingReturn} wei`;
+          $("#dapp-tokens").append(
+            `<div class="col m6">
+              <div class="card">
+                <div class="card-image">
+                  <img id="dapp-image" src="https://gateway.pinata.cloud/ipfs/${token.image.replace("ipfs://", "")}">
+                  <span id="dapp-name" class="card-title">${token.name}</span>
+                </div>
+                <div class="card-action">
+                  <input type="number" min="${token.highestBid + 1}" name="dapp-wei" value="${token.highestBid + 1}" ${token.auctionEnded ? 'disabled' : ''}>
+                  ${token.auctionEnded ? owner : bid}
+                  ${token.pendingReturn > 0 ? withdraw : ''}
+                  ${token.pendingReturn > 0 ? pendingWithdraw : ''}
+                  ${this.isAdmin && !token.auctionEnded ? endAuction : ''}
+                </div>
+              </div>
+            </div>`
+          );
+      } catch (e) {
+        alert(JSON.stringify(e));
+      }
     });
 
-    // fetch the OpenSource Events from the contract and append them to the UI list
-    this.contract.events.OpenSource({fromBlock: 0}, (err, event) => {
-      const { copyright_id, reference_uri } = event.returnValues;
-
-      fetchMetadata(reference_uri)
-      .then((json) => {
-        $("#dapp-opensource").append(renderItem(copyright_id, reference_uri, "fab fa-osi", json));
-      });
+    // hide or show admin functions based on contract ownership
+    this.setAdmin();
+  },
+  bid: async function(event) {
+    const tokenId = $(event.target).attr("token-id");
+    const wei = Number($(event.target).prev().val());
+    await this.marsContract.methods.bid(tokenId).send({from: this.accounts[0], value: wei}).on("receipt", async (receipt) => {
+      M.toast({ html: "Transaction Mined! Refreshing UI..." });
+      await this.updateUI();
     });
   },
-  copyrightWork: async function() {
-    const name = $("#dapp-copyright-name").val();
-    const description = $("#dapp-copyright-description").val();
+  endAuction: async function(event) {
+    const tokenId = $(event.target).attr("token-id");
+    await this.marsContract.methods.endAuction(tokenId).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+      M.toast({ html: "Transaction Mined! Refreshing UI..." });
+      await this.updateUI();
+    });
+  },
+  withdraw: async function(event) {
+    const tokenId = $(event.target).attr("token-id") - 1;
+    await this.tokens[tokenId].auction.methods.withdraw().send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+      M.toast({ html: "Transaction Mined! Refreshing UI..." });
+      await this.updateUI();
+    });
+  },
+  registerLand: async function() {
+    const name = $("#dapp-register-name").val();
     const image = document.querySelector('input[type="file"]');
 
     const pinata_api_key = $("#dapp-pinata-api-key").val();
     const pinata_secret_api_key = $("#dapp-pinata-secret-api-key").val();
 
-    if (!pinata_api_key || !pinata_secret_api_key || !name || !description || !image) {
+    if (!pinata_api_key || !pinata_secret_api_key || !name || !image) {
       M.toast({ html: "Please fill out then entire form!" });
       return;
     }
@@ -83,7 +145,7 @@ const dApp = {
       M.toast({ html: "Uploading JSON..." });
 
       const reference_json = JSON.stringify({
-        pinataContent: { name, description, image: image_uri },
+        pinataContent: { name, image: image_uri },
         pinataOptions: {cidVersion: 1}
       });
 
@@ -104,19 +166,12 @@ const dApp = {
       M.toast({ html: `Success. Reference URI located at ${reference_uri}.` });
       M.toast({ html: "Sending to blockchain..." });
 
-      if ($("#dapp-opensource-toggle").prop("checked")) {
-        this.contract.methods.openSourceWork(reference_uri).send({from: this.accounts[0]})
-        .on("receipt", (receipt) => {
-          M.toast({ html: "Transaction Mined! Refreshing UI..." });
-          location.reload();
-        });
-      } else {
-        this.contract.methods.copyrightWork(reference_uri).send({from: this.accounts[0]})
-        .on("receipt", (receipt) => {
-          M.toast({ html: "Transaction Mined! Refreshing UI..." });
-          location.reload();
-        });
-      }
+      await this.marsContract.methods.registerLand(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+        M.toast({ html: "Transaction Mined! Refreshing UI..." });
+        $("#dapp-register-name").val("");
+        $("#dapp-register-image").val("");
+        await this.updateUI();
+      });
 
     } catch (e) {
       alert("ERROR:", JSON.stringify(e));
@@ -129,17 +184,21 @@ const dApp = {
     }
 
     this.accounts = await window.web3.eth.getAccounts();
+    this.contractAddress = contractAddress;
 
-    this.cryptoRightABI = await (await fetch("./CryptoRight.json")).json();
+    this.marsJson = await (await fetch("./MartianMarket.json")).json();
+    this.auctionJson = await (await fetch("./MartianAuction.json")).json();
 
-    this.contract = new window.web3.eth.Contract(
-      this.cryptoRightABI,
-      contract_address,
+    this.marsContract = new window.web3.eth.Contract(
+      this.marsJson,
+      this.contractAddress,
       { defaultAccount: this.accounts[0] }
     );
-    console.log("Contract object", this.contract);
+    console.log("Contract object", this.marsContract);
 
-    this.updateUI();
+    this.isAdmin = this.accounts[0] == await this.marsContract.methods.owner().call();
+
+    await this.updateUI();
   }
 };
 
