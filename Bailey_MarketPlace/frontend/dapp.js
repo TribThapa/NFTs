@@ -1,10 +1,11 @@
-const contractAddress = "0xb46e0EeD70A0AEB5dE1b9bd983FBb9951D99D9B6";
+// @TODO: Update this address to match your deployed MartianMarket contract!
+const contractAddress = "0x34D07C0A38EB1E76c19dc9914bFF1C391CaE24A6";
+
 
 const dApp = {
   ethEnabled: function() {
     // If the browser has an Ethereum provider (MetaMask) installed
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum);
+    if (window.ethereum) {window.web3 = new Web3(window.ethereum);
       window.ethereum.enable();
       return true;
     }
@@ -166,7 +167,7 @@ const dApp = {
       M.toast({ html: `Success. Reference URI located at ${reference_uri}.` });
       M.toast({ html: "Sending to blockchain..." });
 
-      await this.marsContract.methods.registerLand(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+      await this.marsContract.methods.registerBailey(reference_uri).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
         M.toast({ html: "Transaction Mined! Refreshing UI..." });
         $("#dapp-register-name").val("");
         $("#dapp-register-image").val("");
@@ -186,8 +187,8 @@ const dApp = {
     this.accounts = await window.web3.eth.getAccounts();
     this.contractAddress = contractAddress;
 
-    this.marsJson = await (await fetch("./MartianMarket.json")).json();
-    this.auctionJson = await (await fetch("./MartianAuction.json")).json();
+    this.marsJson = await (await fetch("./BaileyMarket.json")).json();
+    this.auctionJson = await (await fetch("./BaileyAuction.json")).json();
 
     this.marsContract = new window.web3.eth.Contract(
       this.marsJson,
