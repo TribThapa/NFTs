@@ -34,7 +34,7 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 #### Step 4: Upload Bailey's images
 
-![Compile SmartContract](images/.....ver.JPG)
+![Upload Bailey Image](images/4_UploadingImage.png)
 
 
 <p>&nbsp;</p>
