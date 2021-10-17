@@ -13,3 +13,4 @@ Moralis Exchange
 - [DEX Tutorial](https://www.youtube.com/watch?v=XOvtnDx1m5c&ab_channel=MoralisWeb3)
 - [Moralis](https://moralis.io/?utm_source=youtubemoralis&utm_medium=video&utm_campaign=XOvtnDx1m5c)
 - [Repo](https://github.com/MoralisWeb3/demo-apps/tree/main/dex-tutorial)
+- [PlugIns](https://moralis.io/plugins/)
