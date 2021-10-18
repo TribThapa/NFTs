@@ -1,16 +1,17 @@
-const serverUrl = "https://z2hnuln0hlrw.grandmoralis.com:2053/server"; //Server url from moralis.io
-const appId = 'dMxHIw0B0PMQps3PBKwcYFAYVlPcqkFz8SIP85q'; // Application id from moralis.io
+const serverUrl = "https://ekxawiwytg1l.grandmoralis.com:2053/server"; //Server url from moralis.io
+const appId = "uIDCg89NoFpGlfpjWYjZsTXsqzMiSaThCjRrz7CV"; // Application id from moralis.io
 
 let currentTrade = {};
 let currentSelectSide;
 let tokens;
+
 async function init() {
   await Moralis.start({ serverUrl, appId });
   await Moralis.enableWeb3();
   await listAvailableTokens();
   currentUser = Moralis.User.current();
   if (currentUser) {
-    document.getElementById('swap_button').disabled = false;
+    document.getElementById("swap_button").disabled = false;
   }
 }
 
