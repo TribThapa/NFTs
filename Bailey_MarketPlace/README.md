@@ -53,16 +53,16 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 <p>&nbsp;</p>
 
-#### Step 6: Create marketplace with NFTs
+#### Step 7: Create marketplace with NFTs
 
-![Marketplace](images/6_marketplace.png)
+![Create marketplace with NFTs](images/7_CreateMarketPlace.JPG)
 
 
 <p>&nbsp;</p>
 
-#### Step 7: Make bid and confirm transaction
+#### Step 8: Make bid and confirm transaction
 
-![Marketplace](images/7_tx.png)
+![Make bid and confirm transaction](images/8_MakeBid_ConfirmTx.JPG)
 
 
 
