@@ -34,14 +34,14 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 #### Step 4: Set MarketPlace
 
-![Set MarketPlace](images/4_Set MarketPlace.png)
+![Set MarketPlace](images/4_SetMarketPlace.png)
 
 
 <p>&nbsp;</p>
 
 #### Step 5: Upload Bailey's images
 
-![Upload Bailey Image](images/4_UploadingImage.png)
+![Upload Bailey Image](images/5_UploadingImage.png)
 
 
 <p>&nbsp;</p>
