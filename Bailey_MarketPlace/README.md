@@ -55,7 +55,7 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 #### Step 7: Make bid and confirm transaction
 
-![Marketplace](images/7_tx.JPG)
+![Marketplace](images/7_tx.png)
 
 
 
