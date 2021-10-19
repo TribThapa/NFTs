@@ -32,23 +32,37 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 <p>&nbsp;</p>
 
-#### Step 4: Upload Bailey's images
+#### Step 4: Connect MarketPlace with MetaMask
 
-![Upload Bailey Image](images/4_UploadingImage.png)
-
-
-<p>&nbsp;</p>
-
-#### Step 5: Create marketplace 
-
-![Marketplace](images/5_marketplace.JPG)
+![Connect MarketPlace with MetaMask](images/4_ConnectMetaMaskWithMarketPlace.JPG)
 
 
 <p>&nbsp;</p>
 
-#### Step 6: Make bid and confirm transaction
+#### Step 5: Set Marketplace
 
-![Marketplace](images/6_tx.JPG)
+![Set Marketplace](images/5_SetMarketPlace.JPG)
+
+
+<p>&nbsp;</p>
+
+#### Step 6: Upload Image 
+
+![Upload Image](images/6_UploadImage.JPG)
+
+
+<p>&nbsp;</p>
+
+#### Step 7: Create marketplace with NFTs
+
+![Create marketplace with NFTs](images/7_CreateMarketPlace.JPG)
+
+
+<p>&nbsp;</p>
+
+#### Step 8: Make bid and confirm transaction
+
+![Make bid and confirm transaction](images/8_MakeBid_ConfirmTx.JPG)
 
 
 
