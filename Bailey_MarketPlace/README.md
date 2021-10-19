@@ -32,9 +32,9 @@ Our project aimed to create Non-Fungible Tokens (NFTs) using our beloved Greyhou
 
 <p>&nbsp;</p>
 
-#### Step 4: Set MarketPlace
+#### Step 4: Connect MarketPlace with MetaMask
 
-![Set MarketPlace](images/4_SetMarketPlace.png)
+![Connect MarketPlace with MetaMask](images/4_ConnectMetaMaskWithMarketPlace.JPG)
 
 
 <p>&nbsp;</p>
