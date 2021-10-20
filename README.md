@@ -17,4 +17,6 @@ The aim of this project was to leverage Blockchain technology to:
 ![Connect MarketPlace with MetaMask](/images/FlexDex.JPG)
 
 <p>&nbsp;</p>
+
 - Create a [website](https://htmlpreview.github.io/?https://github.com/TribThapa/NFTs/blob/main/website/index.html) to serve as the landing page.
+![Connect MarketPlace with MetaMask](/images/WebPage.JPG)
