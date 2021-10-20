@@ -8,7 +8,7 @@ The aim of this project was to leverage Blockchain technology to:
 
 - Create a MarketPlace to buy-and-sell NFTs. 
 
-![Connect MarketPlace with MetaMask](images/4_ConnectMetaMaskWithMarketPlace.JPG)
+![Connect MarketPlace with MetaMask](Bailey_MarketPlace/images/4_ConnectMetaMaskWithMarketPlace.JPG)
 
 <p>&nbsp;</p>
 - Use [Moralis](https://moralis.io/?utm_source=youtubemoralis&utm_medium=video&utm_campaign=XOvtnDx1m5c) to create a DEX to swap cryptocurrency.
