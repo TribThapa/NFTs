@@ -6,6 +6,12 @@
 ## Project Overview
 The aim of this project was to leverage Blockchain technology to: 
 
+- Create a [website](https://htmlpreview.github.io/?https://github.com/TribThapa/NFTs/blob/main/website/index.html) to serve as the landing page.
+
+![Connect MarketPlace with MetaMask](/images/WebPage.JPG)
+
+<p>&nbsp;</p>
+
 - Create a [MarketPlace](https://github.com/TribThapa/NFTs/tree/main/Bailey_MarketPlace) to buy-and-sell NFTs. 
 
 ![Connect MarketPlace with MetaMask](Bailey_MarketPlace/images/4_ConnectMetaMaskWithMarketPlace.JPG)
@@ -16,8 +22,5 @@ The aim of this project was to leverage Blockchain technology to:
 
 ![Connect MarketPlace with MetaMask](/images/FlexDex.JPG)
 
-<p>&nbsp;</p>
 
-- Create a [website](https://htmlpreview.github.io/?https://github.com/TribThapa/NFTs/blob/main/website/index.html) to serve as the landing page.
 
-![Connect MarketPlace with MetaMask](/images/WebPage.JPG)
