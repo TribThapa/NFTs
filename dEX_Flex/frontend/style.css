@@ -10,13 +10,27 @@ nav{
     background-color: rgb(66, 66, 66) !important;
 }
 #window{
-    margin-top: 50px;
+    margin-top: 0px;
     background-color: #000;
     color: #fff;
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
 }
+
+
+#position {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 48.4%;
+}
+
+#title {
+  position: absolute;
+  top: 70%;
+}
+
 .coin {
   height: var(--coin-size);
   width: var(--coin-size);
