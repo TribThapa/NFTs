@@ -24,7 +24,7 @@ The aim of this project was to leverage Blockchain technology to:
 
 - Use [Moralis](https://moralis.io/?utm_source=youtubemoralis&utm_medium=video&utm_campaign=XOvtnDx1m5c) to create a [DEX](http://flex-dex.xyz/) to swap cryptocurrency.
 
-![Connect MarketPlace with MetaMask](/images/FlexDex.JPG)
+![Connect MarketPlace with MetaMask](/images/DexFlex.JPG)
 
 
 
