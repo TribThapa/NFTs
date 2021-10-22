@@ -22,7 +22,7 @@ The aim of this project was to leverage Blockchain technology to:
 
 <p>&nbsp;</p>
 
-- Use [Moralis](https://moralis.io/?utm_source=youtubemoralis&utm_medium=video&utm_campaign=XOvtnDx1m5c) to create a [DEX](https://github.com/TribThapa/NFTs/tree/main/dEX_Flex) to swap cryptocurrency.
+- Use [Moralis](https://moralis.io/?utm_source=youtubemoralis&utm_medium=video&utm_campaign=XOvtnDx1m5c) to create a [DEX](http://flex-dex.xyz/) to swap cryptocurrency.
 
 ![Connect MarketPlace with MetaMask](/images/FlexDex.JPG)
 
