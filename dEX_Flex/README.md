@@ -8,23 +8,23 @@ Our project aimed to create Flex Dex to provide a simple user friendly way to sw
 
 <p>&nbsp;</p>
 
-## The images below highlight steps involved in creating and launching Flex Dex
+## The images below highlight steps involved in creating and launching DexFlex
 
-Geneterated a Moralis Server
+Geneterate a Moralis Server
 
 ![server.jpg](images/server.jpg)
 
-Add Moralis.io plugins
 
+Add Moralis.io plugins
 
 ![plugins.png](images/plugins.png)
 
 
 
-## Installed 1inch Plugin
-
+## Install 1inch Plugin
 
 ![1inch.png](images/1inch.png)
+
 
 ## Connect Server to Dapp Mainjs
 
@@ -37,33 +37,32 @@ Copy Appilcation ID:
 
 
 
-## Encrypt Url and Application ID into Mainjs
-
+## Encrypt Url and Application ID into main.js
 
 ![encrypt.png](images/encrypt.png)
 
 
 
-## Coding Mainjs for Dapp
-
+## Example of main.js file for DexFlex
 
 ![mainjs.png](images/mainjs.png)
 
 
-## Coding htmljs for Flex Dex coin swap
 
+## Code index.html for DexFlex to swap coins
 
 ![html.png](images/html.png)
 
 
-## Coding Style CCS to create front end interface for Flex Dex
+## Code style.css to create front end interface for DexFlex
 
 ![style.png](images/style.png)
 
 
-# Deploying Flex Dex
+## Deploy DexFlex
 
 ![liveserver.png](images/liveserver.png)
+
 
 ## Connect to Metamask
 
@@ -74,27 +73,22 @@ Copy Appilcation ID:
 
 ![token1.png](images/token1.png)
 
-
+<p>&nbsp;</p>
 
 ![token2.png](images/token2.png)
 
 
-## Price Conversion
+## Check valeu of one coin for another
 
 ![prices.png](images/prices.png)
 
 
-## Confirm Transcation
+## Confirm decentralised exchange
 
 ![transaction.png](images/transaction.png)
 
 
-
-
-
-
-
-
+<p>&nbsp;</p>
 
 ## Sources
 - [DEX Tutorial](https://www.youtube.com/watch?v=XOvtnDx1m5c&ab_channel=MoralisWeb3)
