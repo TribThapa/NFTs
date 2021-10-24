@@ -8,25 +8,27 @@ Our project aimed to create Flex Dex to provide a simple user friendly way to sw
 
 <p>&nbsp;</p>
 
-## The images below highlight steps involved in creating and launching DexFlex
+## The images below highlight the steps involved in creating and launching DexFlex
 
-Geneterate a Moralis Server
+Step 1: Geneterate a Moralis Server
 
 ![server.jpg](images/server.jpg)
 
+<p>&nbsp;</p>
 
-Add Moralis.io plugins
+Step 2: Add Moralis.io plugins
 
 ![plugins.png](images/plugins.png)
 
+<p>&nbsp;</p>
 
-
-## Install 1inch Plugin
+Step 3: Install 1inch Plugin
 
 ![1inch.png](images/1inch.png)
 
+<p>&nbsp;</p>
 
-## Connect Server to Dapp Mainjs
+Step 4: Connect Server to Dapp Mainjs
 
 Copy Server URL:
 
@@ -37,39 +39,53 @@ Copy Appilcation ID:
 
 
 
-## Encrypt Url and Application ID into main.js
+<p>&nbsp;</p>
+
+Step 5: Encrypt Url and Application ID into main.js
 
 ![encrypt.png](images/encrypt.png)
 
 
 
-## Example of main.js file for DexFlex
+<p>&nbsp;</p>
+
+Step 6: Example of main.js file for DexFlex
 
 ![mainjs.png](images/mainjs.png)
 
 
 
-## Code index.html for DexFlex to swap coins
+<p>&nbsp;</p>
+
+Step 7: Code index.html for DexFlex to swap coins
 
 ![html.png](images/html.png)
 
 
-## Code style.css to create front end interface for DexFlex
+<p>&nbsp;</p>
+
+Step 8: Code style.css to create front end interface for DexFlex
 
 ![style.png](images/style.png)
 
 
-## Deploy DexFlex
+<p>&nbsp;</p>
+
+Step 9: Deploy DexFlex
 
 ![liveserver.png](images/liveserver.png)
 
 
-## Connect to Metamask
+<p>&nbsp;</p>
+
+Step 10: Connect to Metamask
 
 ![metamask.png](images/metamask.png)
 
 
-## Select Coins
+<p>&nbsp;</p>
+
+Step 11: Select Coins
 
 ![token1.png](images/token1.png)
 
@@ -78,12 +94,16 @@ Copy Appilcation ID:
 ![token2.png](images/token2.png)
 
 
-## Check valeu of one coin for another
+<p>&nbsp;</p>
+
+Step 12: Check valeu of one coin for another
 
 ![prices.png](images/prices.png)
 
 
-## Confirm decentralised exchange
+<p>&nbsp;</p>
+
+Step 13: Confirm decentralised exchange
 
 ![transaction.png](images/transaction.png)
 
