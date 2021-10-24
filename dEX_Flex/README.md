@@ -28,7 +28,7 @@ Step 3: Install 1inch Plugin
 
 <p>&nbsp;</p>
 
-Step 4: Connect Server to Dapp Mainjs
+Step 4: Connect Server to dAapp's main.js file
 
 Copy Server URL:
 
@@ -49,7 +49,7 @@ Step 5: Encrypt Url and Application ID into main.js
 
 <p>&nbsp;</p>
 
-Step 6: Example of main.js file for DexFlex
+Example of main.js file for DexFlex
 
 ![mainjs.png](images/mainjs.png)
 
@@ -57,35 +57,35 @@ Step 6: Example of main.js file for DexFlex
 
 <p>&nbsp;</p>
 
-Step 7: Code index.html for DexFlex to swap coins
+Step 6: Code index.html for DexFlex to swap coins
 
 ![html.png](images/html.png)
 
 
 <p>&nbsp;</p>
 
-Step 8: Code style.css to create front end interface for DexFlex
+Step 7: Code style.css to create frontend interface for DexFlex
 
 ![style.png](images/style.png)
 
 
 <p>&nbsp;</p>
 
-Step 9: Deploy DexFlex
+Step 8: Deploy DexFlex
 
 ![liveserver.png](images/liveserver.png)
 
 
 <p>&nbsp;</p>
 
-Step 10: Connect to Metamask
+Step 9: Connect to Metamask
 
 ![metamask.png](images/metamask.png)
 
 
 <p>&nbsp;</p>
 
-Step 11: Select Coins
+Step 10: Select coins to swap
 
 ![token1.png](images/token1.png)
 
@@ -96,14 +96,14 @@ Step 11: Select Coins
 
 <p>&nbsp;</p>
 
-Step 12: Check valeu of one coin for another
+Step 11: Check value of one coin for another
 
 ![prices.png](images/prices.png)
 
 
 <p>&nbsp;</p>
 
-Step 13: Confirm decentralised exchange
+Step 12: Confirm decentralised exchange
 
 ![transaction.png](images/transaction.png)
 
