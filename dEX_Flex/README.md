@@ -7,6 +7,7 @@
 Our project aimed to create Flex Dex to provide a simple user friendly way to swap coins.
 
 <p>&nbsp;</p>
+
 ## The images below highlight steps involved in creating and launching Flex Dex
 
 Geneterated a Moralis Server
