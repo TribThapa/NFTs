@@ -78,7 +78,7 @@ Step 8: Deploy DexFlex
 
 <p>&nbsp;</p>
 
-Step 9: Connect to Metamask
+Step 9: Connect to MetaMask
 
 ![metamask.png](images/metamask.png)
 
@@ -103,7 +103,7 @@ Step 11: Check value of one coin for another
 
 <p>&nbsp;</p>
 
-Step 12: Confirm decentralised exchange
+Step 12: Confirm swap i.e., decentralised exchange
 
 ![transaction.png](images/transaction.png)
 
