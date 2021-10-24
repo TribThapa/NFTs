@@ -4,7 +4,7 @@
 <p>&nbsp;</p>
 
 # Project Overview
-Our project aimed to create a Decentralised Exchange (Dex) to swap crypto coins.
+Our project aimed to create a Decentralised Exchange (Dex) to swap cryptocurrency.
 
 <p>&nbsp;</p>
 
