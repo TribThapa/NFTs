@@ -10,19 +10,19 @@ Our project aimed to create Flex Dex to provide a simple user friendly way to sw
 
 Geneterated a Moralis Server
 
-![server.jpg](Images/server.jpg)
+![server.jpg](images/server.jpg)
 
 Add Moralis.io plugins
 
 
-![plugins.png](Images/plugins.png)
+![plugins.png](images/plugins.png)
 
 
 
 ## Installed 1inch Plugin
 
 
-![1inch.png](Images/1inch.png)
+![1inch.png](images/1inch.png)
 
 ## Connect Server to Dapp Mainjs
 
@@ -31,60 +31,60 @@ Copy Server URL:
 Copy Appilcation ID:
 
 
-![serverurl.png](Images/serverurl.png)
+![serverurl.png](images/serverurl.png)
 
 
 
 ## Encrypt Url and Application ID into Mainjs
 
 
-![encrypt.png](Images/encrypt.png)
+![encrypt.png](images/encrypt.png)
 
 
 
 ## Coding Mainjs for Dapp
 
 
-![mainjs.png](Images/mainjs.png)
+![mainjs.png](images/mainjs.png)
 
 
 ## Coding htmljs for Flex Dex coin swap
 
 
-![html.png](Images/html.png)
+![html.png](images/html.png)
 
 
 ## Coding Style CCS to create front end interface for Flex Dex
 
-![style.png](Images/style.png)
+![style.png](images/style.png)
 
 
 # Deploying Flex Dex
 
-![liveserver.png](Images/liveserver.png)
+![liveserver.png](images/liveserver.png)
 
 ## Connect to Metamask
 
-![metamask.png](Images/metamask.png)
+![metamask.png](images/metamask.png)
 
 
 ## Select Coins
 
-![token1.png](Images/token1.png)
+![token1.png](images/token1.png)
 
 
 
-![token2.png](Images/token2.png)
+![token2.png](images/token2.png)
 
 
 ## Price Conversion
 
-![prices.png](Images/prices.png)
+![prices.png](images/prices.png)
 
 
 ## Confirm Transcation
 
-![transaction.png](Images/transaction.png)
+![transaction.png](images/transaction.png)
 
 
 
