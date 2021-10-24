@@ -4,7 +4,7 @@
 <p>&nbsp;</p>
 
 # Project Overview
-Our project aimed to create Flex Dex to provide a simple user friendly way to swap coins.
+Our project aimed to create a Decentralised Exchange (Dex) to swap crypto coins.
 
 <p>&nbsp;</p>
 
